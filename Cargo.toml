@@ -1,0 +1,29 @@
+[package]
+name = "coinbase-logger"
+version = "0.1.0"
+edition = "2021"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[dependencies]
+coinbase-pro-rs = "0.7.1"
+futures = "0.3.21"
+tokio = "1.16.1"
+diesel = {version = "1.4.4", features = ["postgres", "chrono"] }
+dotenv = "0.15.0"
+chrono = {version = "0.4.19", features = ["serde"]}
+
+
+[lib]
+name = "coinbase_api"
+path = "src/lib.rs"
+
+
+[[bin]]
+name = "ticker"
+path = "src/bin/ticker.rs"
+
+
+[[bin]]
+name = "candle1"
+path = "src/bin/candle1.rs"
