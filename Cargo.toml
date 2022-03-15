@@ -22,8 +22,3 @@ path = "src/lib.rs"
 [[bin]]
 name = "ticker"
 path = "src/bin/ticker.rs"
-
-
-[[bin]]
-name = "candle1"
-path = "src/bin/candle1.rs"
