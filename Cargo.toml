@@ -1,5 +1,5 @@
 [package]
-name = "coinbase-logger"
+name = "coinbase-data"
 version = "0.1.0"
 edition = "2021"
 

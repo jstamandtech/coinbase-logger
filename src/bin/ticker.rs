@@ -41,11 +41,13 @@ async fn main() {
         "CVC-USD", "PERP-USD", "VGX-USD", "ENS-USD", "DNT-USD", "DESO-USD", "SPELL-USD", "COMP-USD",
         ];
 
+    //
+    let ws_feed_url =  dotenv::var("WS_FEED_URL").expect("WS_FEED_URL must be set");
 
     //first connect to the database
     let conn = establish_connection();
 
-    let stream = WSFeed::connect(WS_URL, product_ids, &[ChannelType::Ticker])
+    let stream = WSFeed::connect(&ws_feed_url, product_ids, &[ChannelType::Ticker])
         .await
         .unwrap();
 
